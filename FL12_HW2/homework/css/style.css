@@ -37,31 +37,33 @@ p.tm-banner-text {
 
 /* Вирівняємо картинку по праій стороні. Текст по лівому краю */
 div.tm-content-box.flex-2-col {
-  border: red 1px solid;
   text-align: left;
+  display: flex;
+  justify-content: center;
 }
 
 /* Вирівнюємо зображення по правому краю  */
 .flex-item.tm-team-img {
-  text-align: right;
+  justify-content: left;
 }
 
-/* Змінюємо обтикання блоку та опускаєсо його по центру сторінка  */
-div.padding-medium.flex-item.tm-team-description-container.flex-item {
-  width: 338px;
-  float: left;
-  margin-top: 180px;
-}
 /* What we do по центру */
 h2.tm-section-title {
   text-align: center;
 }
+/* Контейнер з текстом вирівнюємо по центру*/
+div.padding-medium.flex-item.tm-team-description-container {
+  align-self: center;
+}
 
-/* .tm-section-description::before {
-  content: "12";
-  background: #f3c;
-  
-} */
+/* Відступи для абзаців в тексті */
 .tm-section-description {
   text-indent: 25px;
+}
+
+/* Добавляємо hover ефект в галерею */
+.tm-section-title.tm-section-title-box.tm-box-bg-title:hover {
+  background-color: lightgrey;
+  font-style: italic;
+  color: lightskyblue;
 }
