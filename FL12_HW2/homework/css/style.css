@@ -18,7 +18,50 @@ write your code here
   background: #fff;
 }
 
-/* Створюємо тінь для тексту в банері та задаєм колір тіні */
+/* Створюємо тінь для тексту в банері та задаєм колір тіні, а також підключаємо анімацію */
 p.tm-banner-text {
   text-shadow: 5px 5px 3px #333;
+  animation-name: move_to_cntr_fr_rght;
+  animation-duration: 5s;
+}
+
+/* Анімація з права на 200пкс для текстового блоку в шапці */
+@keyframes move_to_cntr_fr_rght {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+/* Вирівняємо картинку по праій стороні. Текст по лівому краю */
+div.tm-content-box.flex-2-col {
+  border: red 1px solid;
+  text-align: left;
+}
+
+/* Вирівнюємо зображення по правому краю  */
+.flex-item.tm-team-img {
+  text-align: right;
+}
+
+/* Змінюємо обтикання блоку та опускаєсо його по центру сторінка  */
+div.padding-medium.flex-item.tm-team-description-container.flex-item {
+  width: 338px;
+  float: left;
+  margin-top: 180px;
+}
+/* What we do по центру */
+h2.tm-section-title {
+  text-align: center;
+}
+
+/* .tm-section-description::before {
+  content: "12";
+  background: #f3c;
+  
+} */
+.tm-section-description {
+  text-indent: 25px;
 }
