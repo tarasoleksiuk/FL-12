@@ -3,3 +3,22 @@
 write your code here
 
 */
+
+/* Добавляємо hover і color до меню */
+.tm-nav-item-link:hover {
+  background-color: lightskyblue;
+  color: #fff;
+}
+
+/* Добавляємо градієнт і придаємо внутрішньому блоку фон білий */
+.tm-banner {
+  background: linear-gradient(to right, lightskyblue, burlywood);
+}
+.tm-banner-inner {
+  background: #fff;
+}
+
+/* Створюємо тінь для тексту в банері та задаєм колір тіні */
+p.tm-banner-text {
+  text-shadow: 5px 5px 3px #333;
+}
