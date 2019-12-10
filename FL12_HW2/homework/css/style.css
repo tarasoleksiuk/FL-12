@@ -1,11 +1,4 @@
-/*
-
-write your code here
-
-*/
-
 @media print {
-  /* Невідображаємо  непотрібні елементи */
   div.flex-item.tm-team-img,
   .boxes.gallery-container,
   .img-fluid.img-contact-us,
@@ -14,7 +7,7 @@ write your code here
   #contact {
     display: none;
   }
-  /* Надаємо усім заголовкам шрифт в верхньому регістір */
+
   h2.tm-section-title {
     text-transform: uppercase;
   }
@@ -23,12 +16,12 @@ write your code here
     display: block;
     text-align: center;
   }
-  /* Робимо тип flex щоб вирівняти елементи */
+
   section {
     display: flex;
     justify-content: center;
   }
-  /* Вирівнюємо контейнер our work по центру */
+
   .tm-team-description-container {
     max-width: none;
   }
@@ -44,7 +37,6 @@ write your code here
     text-align: center;
   }
 
-  /* Перефарбовуємо напис we are + по центру */
   section.heading h2 {
     color: lightskyblue;
     text-align: center;
@@ -58,7 +50,6 @@ write your code here
     text-align: center;
   }
 
-  /* Стилізація блоку парних і непарних об'єктів */
   .padding-medium ol li:nth-child(odd) {
     text-align: right;
   }
@@ -70,14 +61,13 @@ write your code here
     text-align: center;
     padding: 0px;
   }
-  /* Відствнь між буквами */
+
   .blocks .padding-medium.flex-item.tm-team-description-container p:last-child {
     letter-spacing: 5px;
     word-spacing: 10px;
     font-style: italic;
   }
 
-  /* Вирівнюємо до оригінала */
   .tm-section-title,
   .padding-medium {
     padding-top: 20px;
@@ -89,13 +79,11 @@ write your code here
 }
 
 @media screen {
-  /* Добавляємо hover і color до меню */
   .tm-nav-item-link:hover {
     background-color: lightskyblue;
     color: #fff;
   }
 
-  /* Добавляємо градієнт і придаємо внутрішньому блоку фон білий */
   .tm-banner {
     background: linear-gradient(to right, lightskyblue, burlywood);
   }
@@ -103,14 +91,12 @@ write your code here
     background: #fff;
   }
 
-  /* Створюємо тінь для тексту в банері та задаєм колір тіні, а також підключаємо анімацію */
   p.tm-banner-text {
     text-shadow: 5px 5px 3px #333;
     animation-name: move_to_cntr_fr_rght;
     animation-duration: 5s;
   }
 
-  /* Анімація з права на 200пкс для текстового блоку в шапці */
   @keyframes move_to_cntr_fr_rght {
     from {
       transform: translateX(200px);
@@ -120,53 +106,45 @@ write your code here
     }
   }
 
-  /* Вирівняємо картинку по праій стороні. Текст по лівому краю */
   div.tm-content-box.flex-2-col {
     text-align: left;
     display: flex;
     justify-content: center;
   }
 
-  /* Вирівнюємо зображення по правому краю  */
   .flex-item.tm-team-img {
     justify-content: left;
   }
 
-  /* What we do по центру */
   .tm-content-box.flex-2-col
     .padding-medium.flex-item.tm-team-description-container.flex-item
     .tm-section-title {
     text-align: center;
   }
-  /* Контейнер з текстом вирівнюємо по центру*/
+
   div.padding-medium.flex-item.tm-team-description-container {
     align-self: center;
   }
 
-  /* Добавляємо hover ефект в галерею */
   .tm-section-title.tm-section-title-box.tm-box-bg-title:hover {
     background-color: lightgrey;
     font-style: italic;
     color: lightskyblue;
   }
 
-  /* Вирівнюємо напис we are */
   section.heading h2 {
     color: lightskyblue;
     text-align: center;
   }
 
-  /* Змінюємо тип перечислення для списку */
   section.heading ol {
     list-style-type: lower-alpha;
   }
 
-  /* Добавляємо знак > до кожного елемента списку */
   section.heading ol li:hover::before {
     content: ">";
   }
 
-  /* Добавляємо надпис New */
   .text::after {
     content: "New";
     display: inline-block;
@@ -177,41 +155,37 @@ write your code here
     font-variant: normal;
   }
 
-  /* Our work по лівому краю */
   div.padding-medium.flex-item.tm-team-description-container
     h2.tm-section-title {
     text-align: left;
   }
 
-  /* Відствнь між буквами */
   .blocks .padding-medium.flex-item.tm-team-description-container p:last-child {
     letter-spacing: 5px;
     word-spacing: 10px;
   }
 
-  /* Стилізація блоку парних і непарних об'єктів */
   .blocks ul.boxes.gallery-container li:nth-child(odd) {
     background-color: lightskyblue;
     color: #fff;
   }
-  /* Міняємо параграфи на італік та кожну 1 букву жирним */
+
   ul.boxes.gallery-container p {
     font-style: italic;
   }
   ul.boxes.gallery-container p:first-letter {
     font-weight: bold;
   }
-  /* Внутрішні відступи для блоків */
+
   .box.box-work {
     padding: 10px;
   }
 
-  /* Відступи для абзаців в тексті і межстрочный интервал*/
   .tm-section-description {
     text-indent: 25px;
     line-height: 30px;
   }
-  /* Створюємо рамку знизу */
+
   #contact_name,
   #contact_email,
   #contact_subject {
@@ -219,7 +193,6 @@ write your code here
     border-bottom: 1px solid lightskyblue;
   }
 
-  /* Створюємо фокус для форм */
   #contact_name:focus,
   #contact_email:focus,
   #contact_subject:focus {
@@ -240,7 +213,6 @@ write your code here
     padding: 15px 25px;
   }
 
-  /* Тінь для навігації, секцій, хеадера */
   .tm-main-nav {
     box-shadow: 1px 1px 5px 1px rgba(61, 55, 61, 0.7);
   }
@@ -252,7 +224,6 @@ write your code here
     box-shadow: 1px 1px 5px 1px rgba(61, 55, 61, 0.7);
   }
 
-  /* Добавляємо трикутник */
   section::before {
     content: "";
     position: absolute;
