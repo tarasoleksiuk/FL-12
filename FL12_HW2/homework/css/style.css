@@ -16,15 +16,6 @@ write your code here
     display: block;
     text-align: center;
   }
-  /* selection {
-    padding: 0px;
-    margin: 0px;
-  } */
-
-  /* .padding-medium.flex-item.tm-team-description-container.flex-item {
-    text-align: center;
-    text-justify: auto;
-  } */
 
   h2.tm-section-title {
     text-transform: uppercase;
@@ -35,14 +26,55 @@ write your code here
     justify-content: center;
   }
 
-  /* section.blocks {
-    align-items: center;
-  } */
   .tm-team-description-container {
-    max-width: 100%;
+    max-width: none;
   }
   .tm-main-content {
     padding: 0px;
+  }
+  .tm-banner,
+  .tm-content-box {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  /* Перефарбовуємо напис we are + по центру */
+  section.heading h2 {
+    color: lightskyblue;
+    text-align: center;
+  }
+  .padding-medium ol li {
+    list-style-type: none;
+
+    width: 400px;
+  }
+
+  /* Стилізація блоку парних і непарних об'єктів */
+  .padding-medium ol li:nth-child(odd) {
+    text-align: right;
+  }
+
+  .padding-medium {
+    padding-bottom: 0px;
+    padding-top: 40px;
+  }
+  section.blocks {
+    text-align: center;
+    padding: 0px;
+  }
+  /* Відствнь між буквами */
+  .blocks .padding-medium.flex-item.tm-team-description-container p:last-child {
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-style: italic;
+  }
+
+  .padding-medium.flex-item.tm-team-description-container {
+    padding-top: 20px;
   }
 }
 
