@@ -46,3 +46,19 @@ header {
   line-height: 1.6;
   letter-spacing: 0.65px;
   white-space: pre-line; }
+.header-wrap div .header_button {
+  background-color: #699709;
+  width: 140px;
+  height: 45px;
+  margin-top: 63px;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px; }
+.header-wrap div .login {
+  margin-left: 150px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  color: #fff; }

@@ -84,10 +84,34 @@ header {
     letter-spacing: 0.65px;
     white-space: pre-line;
   }
+
+  div{
+    .header_button{
+      background-color: map-get($colorsForAll, buttons_grad1_color);
+      width: 140px;
+      height: 45px;
+      margin-top: 63px;
+      color: map-get($colorsForAll, title_link_color);
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+    }
+    .login
+    {
+      margin-left: 150px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 20px;
+      color: map-get($colorsForAll, title_link_color);
+      
+    }
+    
+  }
 }
 //CSS for section
 
 //CSS for footer
 
-//550
-//650
+
+//65
