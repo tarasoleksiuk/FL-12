@@ -1,0 +1,14 @@
+body {
+  width: 1920px;
+  margin: 0px;
+  padding: 0px; }
+
+header {
+  background: url(../img/m-h-day.jpg) no-repeat center center;
+  background-size: cover;
+  height: 720px;
+  border-bottom-right-radius: 50em 17em; }
+
+.header-wrap {
+  padding-left: 192px;
+  padding-top: 20px; }

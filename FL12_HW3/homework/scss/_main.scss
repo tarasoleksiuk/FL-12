@@ -1,1 +1,47 @@
 // Write your styles here
+
+body {
+  width: 1920px;
+  margin: 0px;
+  padding: 0px;
+}
+
+//mixins for links and buttons
+@mixin links {
+  font-family: "Source Sans Pro", sans-serif;
+  color: $mainText_color;
+}
+@mixin buttons {
+  background-color: $buttons_grad1_color;
+  //size of buttons
+}
+
+//map
+$colorsForAll: (
+  bg_color: $bg_color,
+  buttons_grad1_color: $buttons_grad1_color,
+  keyword_grad2_color: $keyword_grad2_color,
+  entitleColor: $entitleColor,
+  title_link_color: $title_link_color,
+  mainText_color: $mainText_color,
+  block_footer_color: $block_footer_color
+);
+
+//CSS for header
+header {
+  background: $pathImgForHeader no-repeat center center;
+  background-size: cover;
+  height: 720px;
+  border-bottom-right-radius: 50em 17em;
+
+  //background-color: map-get($colorsForAll, bg_color);
+}
+
+.header-wrap {
+  padding-left: 192px;
+  padding-top: 20px;
+}
+
+//CSS for section
+
+//CSS for footer
