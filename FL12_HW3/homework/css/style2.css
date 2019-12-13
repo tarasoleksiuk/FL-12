@@ -1,7 +1,10 @@
-body {
-  width: 1920px;
+* {
   margin: 0px;
   padding: 0px; }
+
+body {
+  width: 1920px;
+  font-family: "Hind", sans-serif; }
 
 header {
   background: url(../img/m-h-night.jpg) no-repeat center center;
@@ -12,3 +15,33 @@ header {
 .header-wrap {
   padding-left: 192px;
   padding-top: 20px; }
+
+.header-wrap .landing-logo img {
+  float: left; }
+.header-wrap .landing-logo p {
+  font-size: 23px;
+  font-weight: bold;
+  color: #fff;
+  padding-left: 60px; }
+  .header-wrap .landing-logo p span {
+    display: table;
+    font-size: 10px;
+    font-style: normal;
+    padding-left: 10px;
+    line-height: 0.5; }
+.header-wrap .header_heading {
+  padding-top: 78px;
+  padding-bottom: 40px;
+  width: 500px;
+  font-size: 72px;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 1; }
+.header-wrap .header_text {
+  width: 650px;
+  font-family: "Hind", sans-serif;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.5px; }
