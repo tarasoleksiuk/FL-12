@@ -69,3 +69,36 @@ header {
   visibility: visible;
   background-color: #209acf;
   left: 192px; }
+
+.section {
+  height: 2000px;
+  display: flex;
+  flex-direction: column;
+  background-color: cadetblue;
+  justify-content: flex-start;
+  align-items: center; }
+  .section .section_text {
+    text-align: center; }
+  .section .section_card_wrap {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 1115px; }
+    .section .section_card_wrap .section_card {
+      height: 325px;
+      background-color: violet;
+      align-self: center;
+      display: flex;
+      flex-direction: row; }
+      .section .section_card_wrap .section_card .section_card_img {
+        height: 225px;
+        align-self: center; }
+      .section .section_card_wrap .section_card .section_card_right_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+  .section .section_banner {
+    position: static;
+    background-color: red;
+    text-align: center; }
