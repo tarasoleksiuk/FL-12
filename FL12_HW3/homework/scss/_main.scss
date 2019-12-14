@@ -12,6 +12,7 @@ body {
 @mixin links {
   font-family: "Source Sans Pro", sans-serif;
   color: $mainText_color;
+  
 }
 @mixin buttons {
   background-color: $buttons_grad1_color;
@@ -109,6 +110,16 @@ header {
     
   }
 }
+
+.header_heading::after {
+  position: absolute;
+  content:'awesome';
+   visibility:visible ;
+   background-color:map-get($colorsForAll, keyword_grad2_color); ;
+   left: 192px;
+
+}
+
 //CSS for section
 
 //CSS for footer

@@ -62,3 +62,10 @@ header {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   color: #fff; }
+
+.header_heading::after {
+  position: absolute;
+  content: 'awesome';
+  visibility: visible;
+  background-color: #ff4e32;
+  left: 192px; }
