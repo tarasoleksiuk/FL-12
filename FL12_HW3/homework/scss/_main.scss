@@ -1,4 +1,16 @@
 // Write your styles here
+//map
+$colorsForAll: (
+  bg_color: $bg_color,
+  buttons_grad1_color: $buttons_grad1_color,
+  grad2_color: $grad2_color,
+  keyword_color: $keyword_color,
+  entitleColor: $entitleColor,
+  title_link_color: $title_link_color,
+  mainText_color: $mainText_color,
+  block_footer_color: $block_footer_color
+);
+
 * {
   margin: 0px;
   padding: 0px;
@@ -6,29 +18,18 @@
 body {
   width: 1920px;
   font-family: "Hind", sans-serif;
+  background-color: map-get($colorsForAll, bg_color);
 }
 
 //mixins for links and buttons
 @mixin links {
   font-family: "Source Sans Pro", sans-serif;
   color: $mainText_color;
-  
 }
 @mixin buttons {
   background-color: $buttons_grad1_color;
   //size of buttons
 }
-
-//map
-$colorsForAll: (
-  bg_color: $bg_color,
-  buttons_grad1_color: $buttons_grad1_color,
-  keyword_grad2_color: $keyword_grad2_color,
-  entitleColor: $entitleColor,
-  title_link_color: $title_link_color,
-  mainText_color: $mainText_color,
-  block_footer_color: $block_footer_color
-);
 
 //CSS for header
 header {
@@ -55,7 +56,6 @@ header {
       font-weight: bold;
       color: map-get($colorsForAll, entitleColor);
       padding-left: 60px;
-      //padding-bottom: 0px;
 
       span {
         display: table;
@@ -78,7 +78,7 @@ header {
   }
   .header_text {
     width: 655px;
-    font-family: 'Hind', sans-serif;
+    font-family: "Hind", sans-serif;
     color: map-get($colorsForAll, entitleColor);
     font-size: 15px;
     line-height: 1.6;
@@ -86,8 +86,8 @@ header {
     white-space: pre-line;
   }
 
-  div{
-    .header_button{
+  div {
+    .header_button {
       background-color: map-get($colorsForAll, buttons_grad1_color);
       width: 140px;
       height: 45px;
@@ -99,86 +99,208 @@ header {
       border: none;
       border-radius: 3px;
     }
-    .login
-    {
+    .login {
       margin-left: 150px;
       font-family: "Source Sans Pro", sans-serif;
       font-size: 20px;
       color: map-get($colorsForAll, title_link_color);
-      
     }
-    
   }
 }
 
+//костиль для awesome
 .header_heading::after {
   position: absolute;
-  content:'awesome';
-   visibility:visible ;
-   background-color:map-get($colorsForAll, keyword_grad2_color); ;
-   left: 192px;
+  content: "awesome";
+  visibility: visible;
+  background-color: map-get($colorsForAll, keyword_color);
+  left: 192px;
 }
 
 //CSS for section
 
-
-
-
-
-.section
-{
-  height: 2000px;
+.section {
+  height: 1450px;
   display: flex;
   flex-direction: column;
-  background-color: cadetblue;
-  
+  background-color: map-get($colorsForAll, bg_color);
   justify-content: flex-start;
   align-items: center;
-  
-  
-  .section_text
-  {
-    text-align: center;
+
+  .section_text {
+    align-self: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: map-get($colorsForAll, entitleColor);
+    font-family: "Source Sans Pro", sans-serif;
+    padding-top: 35px;
+    z-index: 1;
+    padding-bottom: 25px;
   }
-  .section_card_wrap
-  {
+  .section_card_wrap {
     align-self: center;
     display: flex;
     flex-direction: column;
     width: 1115px;
-    
-     .section_card
-    {
+
+    .section_card {
+      width: 1120px;
       height: 325px;
-      background-color: violet;
-      align-self: center;
+      background-color: map-get($colorsForAll, block_footer_color);
+      border-radius: 8px;
+      margin-bottom: 25px;
       display: flex;
       flex-direction: row;
-      .section_card_img{
-        height: 225px;
-        align-self:center;
+      align-self: center;
 
+      .section_card_img {
+        width: 920px;
+        height: 290px;
+        align-self: center;
+        border-radius: 8px;
+        margin-left: 20px;
       }
-      .section_card_right_container
-      {
+      .section_card_right_container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-       align-items: center;
-        .section_card_heading{}
-        .section_card_text{}
-        .section_link{}
+        align-items: center;
+        line-height: 1.5;
+
+        .section_card_heading {
+          color: map-get($colorsForAll, title_link_color);
+          padding-bottom: 50px;
+          padding-right: 19px;
+          font-size: 23px;
+          font-weight: 700;
+          font-family: "Source Sans Pro", sans-serif;
+        }
+        .section_card_text {
+          color: map-get($colorsForAll, mainText_color);
+          width: 473px;
+          padding-left: 90px;
+          padding-right: 110px;
+        }
+        .section_link {
+          color: map-get($colorsForAll, mainText_color);
+          padding-top: 30px;
+        }
       }
     }
   }
-  .section_banner
-    {
-      position: static;
-background-color: red;
-text-align: center;
+  .section_banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1200px;
+    height: 145px;
+    margin-top: 125px;
+    border-radius: 8px;
+
+    z-index: 1;
+
+    background: linear-gradient(
+      to right,
+      map-get($colorsForAll, buttons_grad1_color),
+      map-get($colorsForAll, grad2_color)
+    );
+    .section_banner_text_wrap {
+      width: 580px;
+      margin-left: 160px;
+      margin-bottom: 20px;
+      line-height: 2;
+      .section_banner_heading {
+        font-size: 30px;
+        font-weight: bold;
+        color: map-get($colorsForAll, entitleColor);
+        //font-family: "Source Sans Pro", sans-serif;
+      }
+      .section_banner_text {
+        color: map-get($colorsForAll, mainText_color);
+      }
+    }
+    .section_banner_button {
+      align-self: center;
+      background-color: map-get($colorsForAll, buttons_grad1_color);
+      width: 140px;
+      height: 45px;
+      margin-left: 155px;
+      color: map-get($colorsForAll, title_link_color);
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+    }
   }
 }
 
+//костиль для adventure
+.section_text::after {
+  content: "";
+  position: absolute;
+  width: 185px;
+  height: 50px;
+  background-color: map-get($colorsForAll, keyword_color);
+  left: 973px;
+  top: 750px;
+  z-index: -1;
+}
 
+//костиль для start
+.section_banner::after {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 50px;
+  background-color: map-get($colorsForAll, keyword_color);
+  left: 643px;
+  top: 2030px;
+  z-index: -1;
+}
 
-//65
+.footer-wrap {
+  display: flex;
+
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  //position: relative;
+  bottom: 80px;
+  color: map-get($colorsForAll, mainText_color);
+  height: 245px;
+  background-color: map-get($colorsForAll, block_footer_color);
+
+  .footer_logo.landing-logo {
+    margin-bottom: 65px;
+    margin-right: 20px;
+    img {
+      float: left;
+    }
+    p {
+      font-size: 23px;
+      font-weight: bold;
+      color: map-get($colorsForAll, entitleColor);
+      padding-left: 60px;
+      color: map-get($colorsForAll, mainText_color);
+
+      span {
+        display: table;
+        font-size: 10px;
+        font-style: normal;
+        padding-left: 10px;
+        line-height: 0.5;
+      }
+    }
+  }
+  .footer_text {
+    font-size: 14px;
+    width: 310px;
+    margin-bottom: 50px;
+  }
+  .footer-cr {
+    margin-bottom: 70px;
+    margin-left: 110px;
+  }
+}
