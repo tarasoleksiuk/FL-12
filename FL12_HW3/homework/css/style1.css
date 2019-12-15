@@ -187,6 +187,7 @@ header {
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-around;
+  position: relative;
   bottom: 80px;
   color: #bbbec9;
   height: 245px;

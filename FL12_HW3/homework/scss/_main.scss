@@ -196,7 +196,6 @@ header {
     height: 145px;
     margin-top: 125px;
     border-radius: 8px;
-
     z-index: 1;
 
     background: linear-gradient(
@@ -266,7 +265,7 @@ header {
   align-items: flex-end;
   justify-content: space-around;
 
-  //position: relative;
+  position: relative;
   bottom: 80px;
   color: map-get($colorsForAll, mainText_color);
   height: 245px;
