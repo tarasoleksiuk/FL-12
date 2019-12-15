@@ -23,12 +23,29 @@ body {
 
 //mixins for links and buttons
 @mixin links {
-  font-family: "Source Sans Pro", sans-serif;
-  color: $mainText_color;
+  font-family: "Hind", sans-serif;
+  color: map-get($colorsForAll, mainText_color);
+  padding-top: 30px;
 }
 @mixin buttons {
-  background-color: $buttons_grad1_color;
-  //size of buttons
+  background-color: map-get($colorsForAll, buttons_grad1_color);
+      width: 140px;
+      height: 45px;
+      color: map-get($colorsForAll, title_link_color);
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 3px;
+}
+
+@mixin logo_properties {
+  display: table;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 1;
+  padding: 0px 5px 0px;
+  
 }
 
 //CSS for header
@@ -38,31 +55,28 @@ header {
   height: 720px;
   border-bottom-right-radius: 50em 17em;
 
-  //background-color: map-get($colorsForAll, bg_color);
 }
 
-.header-wrap {
+.indents {
   padding-left: 192px;
   padding-top: 18px;
 }
 
 .header-wrap {
+  @extend .indents;
   .landing-logo {
     img {
       float: left;
     }
     p {
+      font-family: $fontTheme;
       font-size: 23px;
       font-weight: bold;
       color: map-get($colorsForAll, entitleColor);
       padding-left: 60px;
 
       span {
-        display: table;
-        font-size: 10px;
-        font-style: normal;
-        padding-left: 10px;
-        line-height: 0.5;
+        @include logo_properties;
       }
     }
   }
@@ -78,7 +92,7 @@ header {
   }
   .header_text {
     width: 655px;
-    font-family: "Hind", sans-serif;
+    font-family: $fontTheme;
     color: map-get($colorsForAll, entitleColor);
     font-size: 15px;
     line-height: 1.6;
@@ -88,16 +102,9 @@ header {
 
   div {
     .header_button {
-      background-color: map-get($colorsForAll, buttons_grad1_color);
-      width: 140px;
-      height: 45px;
       margin-top: 63px;
-      color: map-get($colorsForAll, title_link_color);
-      font-family: "Source Sans Pro", sans-serif;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 3px;
+      @include buttons;
+      
     }
     .login {
       margin-left: 150px;
@@ -180,10 +187,10 @@ header {
           width: 473px;
           padding-left: 90px;
           padding-right: 110px;
+          font-family: $fontTheme;
         }
         .section_link {
-          color: map-get($colorsForAll, mainText_color);
-          padding-top: 30px;
+          @include links;
         }
       }
     }
@@ -197,9 +204,7 @@ header {
     border-radius: 8px;
     position: absolute;
     top: 2020px;
-
     z-index: 1;
-
     background: linear-gradient(
       to right,
       map-get($colorsForAll, buttons_grad1_color),
@@ -214,27 +219,23 @@ header {
         font-size: 30px;
         font-weight: bold;
         color: map-get($colorsForAll, entitleColor);
-        //font-family: "Source Sans Pro", sans-serif;
+        
       }
       .section_banner_text {
         color: map-get($colorsForAll, mainText_color);
+        font-family: $fontTheme;
       }
     }
     .section_banner_button {
       align-self: center;
-      background-color: map-get($colorsForAll, buttons_grad1_color);
-      width: 140px;
-      height: 45px;
       margin-left: 155px;
-      color: map-get($colorsForAll, title_link_color);
-      font-family: "Source Sans Pro", sans-serif;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 3px;
+      @include buttons;
     }
   }
 }
+//
+
+//
 
 //костиль для adventure
 .section_text::after {
@@ -266,16 +267,15 @@ header {
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-around;
-
   position: relative;
-  //bottom: 80px;
   color: map-get($colorsForAll, mainText_color);
   height: 245px;
   background-color: map-get($colorsForAll, block_footer_color);
-
+  font-family: $fontTheme;
   .footer_logo.landing-logo {
     margin-bottom: 65px;
     margin-right: 20px;
+    
     img {
       float: left;
     }
@@ -287,11 +287,7 @@ header {
       color: map-get($colorsForAll, mainText_color);
 
       span {
-        display: table;
-        font-size: 10px;
-        font-style: normal;
-        padding-left: 10px;
-        line-height: 0.5;
+        @include logo_properties;
       }
     }
   }

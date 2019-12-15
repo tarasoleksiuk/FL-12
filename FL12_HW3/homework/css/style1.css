@@ -13,13 +13,14 @@ header {
   height: 720px;
   border-bottom-right-radius: 50em 17em; }
 
-.header-wrap {
+.indents, .header-wrap {
   padding-left: 192px;
   padding-top: 18px; }
 
 .header-wrap .landing-logo img {
   float: left; }
 .header-wrap .landing-logo p {
+  font-family: "Hind", sans-serif;
   font-size: 23px;
   font-weight: bold;
   color: #2c2f3c;
@@ -28,8 +29,8 @@ header {
     display: table;
     font-size: 10px;
     font-style: normal;
-    padding-left: 10px;
-    line-height: 0.5; }
+    line-height: 1;
+    padding: 0px 5px 0px; }
 .header-wrap .header_heading {
   padding-top: 78px;
   padding-bottom: 35px;
@@ -48,10 +49,10 @@ header {
   letter-spacing: 0.65px;
   white-space: pre-line; }
 .header-wrap div .header_button {
+  margin-top: 63px;
   background-color: #699709;
   width: 140px;
   height: 45px;
-  margin-top: 63px;
   color: #fff;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
@@ -124,8 +125,10 @@ header {
           color: #bbbec9;
           width: 473px;
           padding-left: 90px;
-          padding-right: 110px; }
+          padding-right: 110px;
+          font-family: "Hind", sans-serif; }
         .section .section_card_wrap .section_card .section_card_right_container .section_link {
+          font-family: "Hind", sans-serif;
           color: #bbbec9;
           padding-top: 30px; }
   .section .section_banner {
@@ -149,13 +152,14 @@ header {
         font-weight: bold;
         color: #2c2f3c; }
       .section .section_banner .section_banner_text_wrap .section_banner_text {
-        color: #bbbec9; }
+        color: #bbbec9;
+        font-family: "Hind", sans-serif; }
     .section .section_banner .section_banner_button {
       align-self: center;
+      margin-left: 155px;
       background-color: #699709;
       width: 140px;
       height: 45px;
-      margin-left: 155px;
       color: #fff;
       font-family: "Source Sans Pro", sans-serif;
       font-size: 18px;
@@ -192,7 +196,8 @@ header {
   position: relative;
   color: #bbbec9;
   height: 245px;
-  background-color: #21242e; }
+  background-color: #21242e;
+  font-family: "Hind", sans-serif; }
   .footer-wrap .footer_logo.landing-logo {
     margin-bottom: 65px;
     margin-right: 20px; }
@@ -208,8 +213,8 @@ header {
         display: table;
         font-size: 10px;
         font-style: normal;
-        padding-left: 10px;
-        line-height: 0.5; }
+        line-height: 1;
+        padding: 0px 5px 0px; }
   .footer-wrap .footer_text {
     font-size: 14px;
     width: 310px;
