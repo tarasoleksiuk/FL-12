@@ -1,0 +1,103 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Merriweather', serif;
+}
+
+.container {
+  min-width: 900px;
+}
+.container .menuAndLogo {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  height: 87px;
+  justify-content: space-around;
+  padding-left: 50px;
+}
+.container .menuAndLogo .logo {
+  align-self: center;
+  text-transform: uppercase;
+  color: #777;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.container .menuAndLogo .menu {
+  align-self: center;
+  font-size: 14px;
+  word-spacing: 30px;
+}
+.container .menuAndLogo .menu a {
+  color: #777;
+  text-decoration: none;
+}
+.container .slayder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  border: 1px solid grey;
+  background-image: url(../img/home-bg.jpg);
+  background-size: cover;
+}
+.container .slayder .welcomeText {
+  font-size: 56px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-block-end: 5px;
+  margin-block-start: 5px;
+  position: relative;
+  left: 8px;
+}
+.container .slayder .describe-welcomeText {
+  font-size: 11px;
+  color: #bfba55;
+  letter-spacing: 3px;
+  align-self: center;
+  position: relative;
+  bottom: -3px;
+}
+.container .slayder .btnDscvr {
+  background-color: #FFFFFF;
+  font-size: 10px;
+  font-family: 'Merriweather', serif;
+  padding: 15px 25px 15px;
+  border-radius: 25px;
+  letter-spacing: 2px;
+  border: none;
+  font-weight: bold;
+  position: relative;
+  bottom: -44px;
+}
+.container .mainContent {
+  height: 5540px;
+}
+.container .mainContent .news p.title {
+  color: paleturquoise;
+}
+.container .mainContent .news .statistics .userName {
+  color: grey;
+}
+.container .mainContent .news .statistics .data {
+  color: green;
+}
+.container .mainContent .news .statistics .comments {
+  color: hotpink;
+}
+.container .mainContent .news p.textOfNews {
+  color: plum;
+}
+.container .mainContent .news .btnConRea {
+  color: purple;
+}
+
+.nav-Home a.nav-link-Home:hover,
+.nav-About a.nav-link-About:hover,
+.nav-Gallery a.nav-link-Gallery:hover,
+.nav-Contact a.nav-link-Contact:hover {
+  color: #bfba55;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,139 @@
+//Variables
+$text:#777 ;
+$someWhite:#FFFFFF;
+$someBlack:#000;
+$someYellow:#bfba55;
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Merriweather', serif;
+}
+
+.container
+{
+    min-width: 900px;
+    
+    .menuAndLogo
+    {
+        display: flex;
+        flex-direction: row;
+        background-color: $someWhite;
+        height: 87px;
+        justify-content: space-around;
+        padding-left: 50px;
+        
+            .logo
+            {
+                align-self: center;
+                text-transform: uppercase;
+                color: $text;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 5px;
+                
+            }
+            .menu
+            {
+                align-self: center;
+                font-size: 14px;
+                word-spacing: 30px;
+                
+                
+                a
+                {
+                    color: $text;
+                    text-decoration: none;
+                }
+            }
+        
+    }
+    .slayder
+    {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    border: 1px solid grey;
+    background-image: url(../img/home-bg.jpg);
+    background-size: cover ;
+    
+    .welcomeText
+    {
+        font-size: 56px;
+        font-weight: 600;
+        color: $someWhite;
+        
+       margin-block-end: 5px;
+       margin-block-start: 5px;
+       position: relative;
+       left:8px;
+       
+    }
+    .describe-welcomeText
+    {
+    font-size: 11px;
+    color:$someYellow ;
+    
+    letter-spacing: 3px;
+    align-self: center;
+    position: relative;
+    bottom: -3px;
+
+    
+    }
+    .btnDscvr
+    {
+        background-color: $someWhite;
+        font-size: 10px;
+        font-family: 'Merriweather', serif;
+        padding:  15px 25px 15px;
+        border-radius: 25px;
+        letter-spacing: 2px;
+        border: none;
+        font-weight: bold;
+        position: relative;
+        bottom: -44px;
+        
+    }
+
+
+    }
+    .mainContent
+    {
+        height: 5540px;
+        .news
+        {
+            .news-image{}
+            p.title
+            {
+                color: paleturquoise;
+            }
+            .statistics
+            {
+                .userLogo{}
+                .userName{color: grey;}
+                .data{color: green;}
+                .comments{color: hotpink;}
+            }
+            p.textOfNews{color: plum;}
+            .btnConRea{color: purple;}
+        }
+        
+
+    }
+
+}
+
+//Псевдоклас для меню hover
+.nav-Home a.nav-link-Home:hover,
+.nav-About a.nav-link-About:hover,
+.nav-Gallery a.nav-link-Gallery:hover,
+.nav-Contact a.nav-link-Contact:hover
+{
+    color:$someYellow;
+}
+
+//5540px
