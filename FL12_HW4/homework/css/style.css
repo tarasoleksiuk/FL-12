@@ -4,6 +4,9 @@ body {
   font-family: 'Merriweather', serif;
 }
 
+.container {
+  min-width: 850px;
+}
 .container .invisibleDiv {
   height: 87px;
   width: 100%;
@@ -36,13 +39,13 @@ body {
   text-decoration: none;
 }
 .container .slayder {
+  margin-bottom: 26px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 800px;
-  border: 1px solid grey;
-  background-image: url(../img/home-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/home-bg.jpg);
   background-size: cover;
 }
 .container .slayder .welcomeText {
@@ -78,14 +81,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 5167px;
-  margin-top: 113px;
-  border: 1px solid grey;
+  height: 5510px;
 }
 .container .mainContent .news {
-  width: 940px;
-  min-width: 850px;
-  border: 1px solid red;
+  margin-top: 90px;
+  width: 850px;
 }
 .container .mainContent .news .news-image {
   text-align: center;
@@ -94,25 +94,63 @@ body {
   display: block;
   width: 100%;
   height: 630px;
-  object-fit: cover;
+  object-fit: scale-down;
+  object-position: top;
 }
 .container .mainContent .news p.title {
-  color: paleturquoise;
+  font-weight: bold;
+  color: #000;
+  font-size: 26px;
+  word-spacing: 2px;
+  margin: 35px 0px 0px;
+}
+.container .mainContent .news .statistics {
+  margin: 20px 0px 0px;
+  padding-right: 6px;
+}
+.container .mainContent .news .statistics .userLogo {
+  padding-right: 6px;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 .container .mainContent .news .statistics .userName {
-  color: grey;
+  padding-right: 6px;
+  color: #777;
+  font-size: 15px;
 }
 .container .mainContent .news .statistics .data {
-  color: green;
+  padding-right: 6px;
+  color: #777;
+  font-size: 15px;
 }
 .container .mainContent .news .statistics .comments {
-  color: hotpink;
+  padding-right: 5px;
+  color: #777;
+  font-size: 15px;
 }
 .container .mainContent .news p.textOfNews {
-  color: plum;
+  font-size: 13px;
+  line-height: 2;
+  color: #777;
+  word-spacing: 0.1px;
 }
 .container .mainContent .news .btnConRea {
-  color: purple;
+  background-color: #FFFFFF;
+  font-size: 12px;
+  font-family: 'Merriweather', serif;
+  padding: 17px 21px 17px;
+  border-radius: 25px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #777;
+  border: 1px solid #bfbfbf;
+  margin: 19px 0px 0px;
+}
+.container .mainContent .news hr {
+  margin: 55px 0px 0px;
+  opacity: 0.3;
 }
 .container .footer {
   height: 356px;
@@ -124,30 +162,43 @@ body {
 }
 .container .footer .epamLab {
   width: 432px;
+  padding-top: 16px;
 }
 .container .footer .epamLab .titleEpamLab {
+  font-weight: bold;
+  font-size: 28px;
   color: #FFFFFF;
 }
 .container .footer .epamLab .shortInfo {
   color: #777;
+  font-size: 14.5px;
+  line-height: 2;
 }
 .container .footer .epamLab .copyrate {
   color: #777;
+  font-size: 15px;
+  line-height: 2;
 }
 .container .footer .talkToUs {
   width: 323px;
 }
 .container .footer .talkToUs .titleTalkToUs {
+  font-weight: bold;
+  font-size: 28px;
   color: #FFFFFF;
 }
 .container .footer .talkToUs .adress {
   color: #777;
+  font-size: 14.5px;
+  line-height: 2;
 }
 .container .footer .talkToUs .phone {
   color: #777;
+  font-size: 14.5px;
 }
 .container .footer .talkToUs .mail {
   color: #777;
+  font-size: 14.5px;
 }
 
 .nav-Home a.nav-link-Home:hover,
@@ -157,4 +208,4 @@ body {
   color: #bfba55;
 }
 
-/*# sourceMappingURL=style.css.map */
+
