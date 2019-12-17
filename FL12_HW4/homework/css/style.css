@@ -4,14 +4,17 @@ body {
   font-family: 'Merriweather', serif;
 }
 
-.container {
-  min-width: 900px;
+.container .invisibleDiv {
+  height: 87px;
+  width: 100%;
 }
 .container .menuAndLogo {
+  position: fixed;
+  width: 100%;
+  height: 87px;
   display: flex;
   flex-direction: row;
   background-color: #FFFFFF;
-  height: 87px;
   justify-content: space-around;
   padding-left: 50px;
 }
@@ -72,7 +75,26 @@ body {
   bottom: -44px;
 }
 .container .mainContent {
-  height: 5540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 5167px;
+  margin-top: 113px;
+  border: 1px solid grey;
+}
+.container .mainContent .news {
+  width: 940px;
+  min-width: 850px;
+  border: 1px solid red;
+}
+.container .mainContent .news .news-image {
+  text-align: center;
+}
+.container .mainContent .news .news-image .imgN {
+  display: block;
+  width: 100%;
+  height: 630px;
+  object-fit: cover;
 }
 .container .mainContent .news p.title {
   color: paleturquoise;
@@ -91,6 +113,41 @@ body {
 }
 .container .mainContent .news .btnConRea {
   color: purple;
+}
+.container .footer {
+  height: 356px;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .footer .epamLab {
+  width: 432px;
+}
+.container .footer .epamLab .titleEpamLab {
+  color: #FFFFFF;
+}
+.container .footer .epamLab .shortInfo {
+  color: #777;
+}
+.container .footer .epamLab .copyrate {
+  color: #777;
+}
+.container .footer .talkToUs {
+  width: 323px;
+}
+.container .footer .talkToUs .titleTalkToUs {
+  color: #FFFFFF;
+}
+.container .footer .talkToUs .adress {
+  color: #777;
+}
+.container .footer .talkToUs .phone {
+  color: #777;
+}
+.container .footer .talkToUs .mail {
+  color: #777;
 }
 
 .nav-Home a.nav-link-Home:hover,

@@ -13,16 +13,25 @@ body
 
 .container
 {
-    min-width: 900px;
+    .invisibleDiv
+    {
+        height: 87px;
+        width: 100%;
+    }
+    //min-width: 850px;
     
     .menuAndLogo
     {
+        position:fixed;
+        width: 100%;
+        height: 87px;
         display: flex;
         flex-direction: row;
         background-color: $someWhite;
-        height: 87px;
         justify-content: space-around;
         padding-left: 50px;
+        //background-color: red;
+       
         
             .logo
             {
@@ -51,6 +60,7 @@ body
     }
     .slayder
     {
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,10 +113,32 @@ body
     }
     .mainContent
     {
-        height: 5540px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        height: 5167px;
+        margin-top: 113px;
+        border: 1px solid grey; //Видали це турок
         .news
         {
-            .news-image{}
+           width: 940px;
+           min-width: 850px;
+           border: 1px solid red;
+            .news-image
+            {
+                text-align: center;
+                
+                //width: 945px;
+                .imgN
+                {
+                    display: block;
+                   width: 100%;
+                   height: 630px; 
+                   object-fit: cover;
+                }
+                
+            }
             p.title
             {
                 color: paleturquoise;
@@ -124,7 +156,36 @@ body
         
 
     }
-
+    .footer
+    {
+        height: 356px;
+        background-color: $someBlack;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        
+        .epamLab
+        {
+            width: 432px;
+            .titleEpamLab
+            {
+                color:$someWhite ;
+                
+            }
+            .shortInfo{color:$text;}
+            .copyrate{color:$text;}
+        }
+        .talkToUs
+        {
+            width: 323px;
+            .titleTalkToUs{color:$someWhite ;}
+            .adress{color:$text;}
+            .phone{color:$text;}
+            .mail{color:$text;}
+        }
+    }
 }
 
 //Псевдоклас для меню hover
