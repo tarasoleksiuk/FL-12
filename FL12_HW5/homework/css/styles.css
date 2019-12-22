@@ -2,13 +2,6 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
-:root {
-  --bg-color--dark: #0b192f; /*used*/
-  --bg-color--header: #024161; /*used*/
-  --link: #fff; /*used*/
-  --link--hover: #1f52a4; /*used*/
-  --bg-footer-color: #024161; /*used*/
-}
 
 .post-1 {
   background: #9d27b0;
@@ -54,6 +47,245 @@ footer {
 @media (min-width: 0px) and (max-width: 480px) {
   /* CSS-стили Стили этого запроса будут применяться для всех устройств \
   при ширине области просмотра от 0px до 480px включительно.*/
+  /* починаю свій код */
+  body {
+    width: 100%;
+    margin: 0px auto;
+  }
+  .lines3 {
+    margin-bottom: 30%;
+  }
+
+  .colums2 {
+    position: absolute;
+    top: 2805px;
+  }
+
+  .lines3 hr {
+    margin: 5px 50%;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+    height: 175px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    visibility: hidden;
+  }
+
+  .mainNews {
+    width: 100%;
+    height: 295px;
+    background-image: url("../img/post0.jpg");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    margin-bottom: 15px;
+  }
+
+  .main_block {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .colums1 {
+    width: 100%;
+  }
+
+  .colums2 {
+    width: 100%;
+  }
+
+  .post {
+    width: 100%;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    height: 50%;
+  }
+
+  .describe {
+    width: 100%;
+    cursor: pointer;
+    height: 50%;
+  }
+
+  .image > img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .image > img:hover {
+    opacity: 0.5;
+  }
+
+  .news {
+    width: 100%;
+    /* height: 535px; */
+
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+  }
+
+  .newsText {
+    width: 100%;
+    height: auto;
+  }
+
+  .imgNews > img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Шрифти  */
+
+  .logo {
+    font-size: 35px;
+    padding-left: 10px;
+  }
+  .firsPartLogo {
+    color: #fff;
+  }
+
+  .secondPartLogo {
+    color: #c42767;
+  }
+
+  a {
+    padding: 30px 30px;
+  }
+  h1.title {
+    color: #fff;
+    font-weight: normal;
+    font-size: 32px;
+  }
+
+  .describe .title:hover {
+    opacity: 0.5;
+  }
+
+  p.shortInfo {
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  p.headShortInfo {
+    width: 90%;
+  }
+
+  .textOfMainNews {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  .describe {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .describeText {
+    width: 85%;
+    padding-left: 10px;
+  }
+  .describeData {
+    width: 10%;
+    text-align: right;
+  }
+
+  .postNoimage {
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .describeNoimage {
+    width: 85%;
+    margin-left: 10px;
+  }
+  .describeData {
+    opacity: 0.3;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .digits {
+    color: #fff;
+    font-size: 30px;
+  }
+  .mounth {
+    color: #fff;
+    font-size: 15px;
+  }
+
+  footer {
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: rgb(143, 134, 134);
+    line-height: 0.5;
+    font-size: 15px;
+    margin-top: 20px;
+    position: relative;
+
+    top: 960px;
+  }
+  .copyryth {
+    font-size: 10px;
+    text-align: center;
+  }
+  .author {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .news {
+    width: 100%;
+  }
+
+  .newsText {
+    padding: 15px;
+    padding-top: 0px;
+    width: 80%;
+  }
+  .title_news {
+    font-size: 22px;
+  }
+  .shortInfo_news {
+    font-size: 12px;
+  }
+  .postNoimage.post-5 .describeData {
+    align-self: center;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -61,8 +293,8 @@ footer {
     при ширине области просмотра от 481px до 768px включительно.*/
   /* починаю свій код */
   body {
-    width: 600px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0px auto;
   }
   .lines3 {
     margin-bottom: 30%;
