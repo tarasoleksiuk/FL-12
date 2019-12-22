@@ -61,25 +61,36 @@ footer {
     при ширине области просмотра от 481px до 768px включительно.*/
   /* починаю свій код */
   body {
-    width: 1400px;
+    width: 600px;
     margin: 0 auto;
   }
+  .lines3 {
+    margin-bottom: 30%;
+  }
 
+  .lines3 hr {
+    margin: 5px 50%;
+    text-align: center;
+  }
   nav {
     width: 100%;
-    height: 105px;
+    height: 180px;
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     margin-bottom: 20px;
   }
 
+  .menu {
+    visibility: hidden;
+  }
+
   .mainNews {
     width: 100%;
-    height: 440px;
+    height: 295px;
     background-image: url("../img/post0.jpg");
     background-size: cover;
 
@@ -99,27 +110,29 @@ footer {
   }
 
   .colums1 {
-    width: 74%;
+    width: 64%;
   }
 
   .colums2 {
-    width: 24%;
+    width: 34%;
   }
 
   .post {
     width: 100%;
-    height: 330px;
+    height: 476px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .image {
-    width: 50%;
+    width: 100%;
+    height: 50%;
   }
 
   .describe {
-    width: 50%;
+    width: 100%;
     cursor: pointer;
+    height: 50%;
   }
 
   .image > img {
@@ -175,7 +188,7 @@ footer {
   h1.title {
     color: #fff;
     font-weight: normal;
-    font-size: 52px;
+    font-size: 32px;
   }
 
   .describe .title:hover {
@@ -183,12 +196,13 @@ footer {
   }
 
   p.shortInfo {
+    font-size: 12px;
     color: #fff;
     line-height: 1.5;
   }
 
   p.headShortInfo {
-    width: 65%;
+    width: 90%;
   }
 
   .textOfMainNews {
@@ -203,7 +217,7 @@ footer {
 
   .describeText {
     width: 85%;
-    /* padding-left: 30px; */
+    padding-left: 10px;
   }
   .describeData {
     width: 10%;
@@ -211,24 +225,25 @@ footer {
   }
 
   .postNoimage {
-    height: 215px;
+    height: 340px;
     display: flex;
-    flex-direction: row;
-    width: 74%;
+    flex-direction: column;
+    width: 64%;
   }
 
   .describeNoimage {
     width: 85%;
-    margin-left: 30px;
+    margin-left: 10px;
   }
   .describeData {
     opacity: 0.3;
-    /* margin-right: 15px; */
+    justify-content: center;
+    align-items: center;
   }
 
   .digits {
     color: #fff;
-    font-size: 50px;
+    font-size: 30px;
   }
   .mounth {
     color: #fff;
@@ -236,20 +251,24 @@ footer {
   }
 
   footer {
+    height: 125px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    color: #fff;
+
+    color: rgb(143, 134, 134);
     line-height: 0.5;
     font-size: 15px;
     margin-top: 20px;
   }
   .copyryth {
-    margin-left: 30px;
+    font-size: 10px;
+    text-align: center;
   }
   .author {
-    margin-right: 30px;
+    font-size: 10px;
+    text-align: center;
   }
 
   .news {
@@ -257,50 +276,26 @@ footer {
   }
 
   .newsText {
-    padding: 30px;
+    padding: 15px;
     padding-top: 0px;
     width: 80%;
   }
   .title_news {
-    font-size: 35px;
+    font-size: 22px;
   }
-  /* Поміняти порядок елементів зіг-загом */
-  .main_block > .colums1 > .post:nth-child(even) > .describe:nth-child(even) {
-    order: -1;
-    text-align: right;
+  .shortInfo_news {
+    font-size: 12px;
   }
-  /* Поміняти колонку з датою */
-  .main_block
-    > .colums1
-    > .post:nth-child(even)
-    > .describe
-    > .describeData:nth-child(even) {
-    order: -1;
-    text-align: left;
-    margin: 0px;
-  }
-  /* Cтилізувати колонку з текстом ТЕКСТ-КАРТИНКА */
-  .main_block
-    > .colums1
-    > .post:nth-child(even)
-    > .describe
-    > div.describeText:nth-child(even) {
-    text-align: right;
-    margin-right: 4%;
-  }
-  /* Cтилізувати колонку з текстом КАРТИНКА-ТЕКСТ */
-  .main_block
-    > .colums1
-    > .post:nth-child(odd)
-    > .describe
-    > div.describeText:nth-child(odd) {
-    text-align: left;
-    margin-left: 4%;
+  .postNoimage.post-5 .describeData {
+    align-self: center;
   }
 }
 
 @media (min-width: 769px) {
   /* починаю свій код */
+  .lines3 {
+    display: none;
+  }
   body {
     width: 1400px;
     margin: 0 auto;
