@@ -4,7 +4,7 @@ let changePassword;
 let oldPassword;
 let newPassword;
 let repeatNewPassword;
-let isValid = true;
+let doThis = true;
 let corPassforUser = 'UserPass';
 let corPassforAdmin = 'AdminPass';
 let six = 6;
@@ -14,98 +14,122 @@ userEmail = prompt('Please,write your email');
 
 if (userEmail === null || userEmail.length === 0) {
   alert('Canceled.');
-  isValid = false;
+  doThis = false;
 }
 
-if (isValid && userEmail.length < five) {
+if (doThis && userEmail.length < five) {
   console.log(userEmail.length);
   alert("I don't know any emails having name length less than 5 symbols.");
-  isValid = false;
+  doThis = false;
 }
 
 if (
-  isValid &&
+  doThis &&
   (userEmail === 'user@gmail.com' || userEmail === 'admin@gmail.com')
 ) {
   if (userEmail === 'user@gmail.com') {
     userPassword = prompt('Please,write your password');
     if (userPassword === null || userPassword.length === 0) {
       alert('Canceled.');
-      isValid = false;
+      doThis = false;
     }
-    if (isValid && userPassword === corPassforUser) {
+    if (doThis && userPassword === corPassforUser) {
       changePassword = confirm('Do you want to change your password?');
       if (changePassword === false) {
         alert('You have failed the change.');
+        doThis = false;
       }
       if (changePassword === true) {
         oldPassword = prompt('Please, write the old password');
         if (oldPassword === null || oldPassword.length === 0) {
           alert('Canceled.');
+          doThis = false;
         }
         if (oldPassword === 'UserPass') {
           newPassword = prompt('Please, write the new password');
           if (newPassword === null || newPassword.length === 0) {
             alert('Canceled.');
+            doThis = false;
           }
-          if (newPassword.length < six) {
+          if (doThis && newPassword.length < six) {
             alert('It’s too short password. Sorry');
-          } else {
+            doThis = false;
+          }
+          if (doThis) {
             repeatNewPassword = prompt('Please, repeat your new password');
           }
-          if (newPassword !== repeatNewPassword) {
+          if (doThis && newPassword !== repeatNewPassword) {
             alert('You wrote the wrong password.');
+            doThis = false;
           }
-          if (newPassword === repeatNewPassword) {
+          if (doThis && newPassword === repeatNewPassword) {
             alert('You have successfully changed your password.');
+            doThis = false;
           }
-        } else {
+        }
+        if (doThis) {
           alert('Wrong password');
+          doThis = false;
         }
       }
-    } else {
-      alert('Wrong password');
     }
-  } else if (userEmail === 'admin@gmail.com') {
+    if (doThis) {
+      alert('Wrong password');
+      doThis = false;
+    }
+  }
+  if (userEmail === 'admin@gmail.com') {
     userPassword = prompt('Please,write your password');
     if (userPassword === null || userPassword.length === 0) {
       alert('Canceled.');
-      isValid = false;
+      doThis = false;
     }
-    if (isValid && userPassword === corPassforAdmin) {
+    if (doThis && userPassword === corPassforAdmin) {
       changePassword = confirm('Do you want to change your password?');
       if (changePassword === false) {
         alert('You have failed the change.');
+        doThis = false;
       }
       if (changePassword === true) {
         oldPassword = prompt('Please, write the old password');
         if (oldPassword === null || oldPassword.length === 0) {
           alert('Canceled.');
+          doThis = false;
         }
         if (oldPassword === 'AdminPass') {
           newPassword = prompt('Please, write the new password');
           if (newPassword === null || newPassword.length === 0) {
             alert('Canceled.');
+            doThis = false;
           }
-          if (newPassword.length < six) {
+          if (doThis && newPassword.length < six) {
             alert('It’s too short password. Sorry');
-          } else {
+            doThis = false;
+          }
+          if (doThis) {
             repeatNewPassword = prompt('Please, repeat your new password');
           }
-          if (newPassword !== repeatNewPassword) {
+          if (doThis && newPassword !== repeatNewPassword) {
             alert('You wrote the wrong password.');
+            doThis = false;
           }
-          if (newPassword === repeatNewPassword) {
+          if (doThis && newPassword === repeatNewPassword) {
             alert('You have successfully changed your password.');
+            doThis = false;
           }
-        } else {
+        }
+        if (doThis) {
           alert('Wrong password');
+          doThis = false;
         }
       }
-    } else {
+    }
+    if (doThis) {
       alert('Wrong password');
+      doThis = false;
     }
   }
-} else {
+}
+if (doThis) {
   alert("I don't know you");
 }
