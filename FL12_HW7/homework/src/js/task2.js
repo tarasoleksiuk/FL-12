@@ -13,10 +13,10 @@ let firstPrize = 100;
 let secondPrize = 50;
 let thirdPrize = 25;
 let gameNumber = 1;
-const two = 2,
-  four = 4,
-  eight = 8,
-  oneHundred = 100;
+const TWO = 2,
+  FOUR = 4,
+  EIGHT = 8,
+  ONE_HUNDRED = 100;
 
 if (doYouWanPlay === false) {
   alert('You did not become a billionaire, but can.');
@@ -25,10 +25,10 @@ if (doYouWanPlay === false) {
 if (doYouWanPlay === true) {
   while (doYouWanPlayAgain) {
     if (gameNumber !== 1) {
-      firstPrize = firstPrize * two;
-      secondPrize = secondPrize * two;
-      thirdPrize = thirdPrize * two;
-      maxRandom = maxRandom + four;
+      firstPrize = firstPrize * TWO;
+      secondPrize = secondPrize * TWO;
+      thirdPrize = thirdPrize * TWO;
+      maxRandom = maxRandom + FOUR;
       possiblePrize = firstPrize;
     }
 
@@ -70,13 +70,13 @@ if (doYouWanPlay === true) {
                 totalPrize +
                 '$'
             );
-            firstPrize = oneHundred;
+            firstPrize = ONE_HUNDRED;
             currentAttemp = 0;
             possiblePrize = firstPrize;
             doYouWanPlayAgain = true;
             gameNumber = 1;
             totalPrize = 0;
-            maxRandom = eight;
+            maxRandom = EIGHT;
             break;
           }
 
@@ -103,13 +103,13 @@ if (doYouWanPlay === true) {
                 totalPrize +
                 '$'
             );
-            firstPrize = oneHundred;
+            firstPrize = ONE_HUNDRED;
             currentAttemp = 0;
             possiblePrize = firstPrize;
             doYouWanPlayAgain = true;
             gameNumber = 1;
             totalPrize = 0;
-            maxRandom = eight;
+            maxRandom = EIGHT;
             break;
           }
           currentAttemp = 0;
@@ -121,7 +121,7 @@ if (doYouWanPlay === true) {
         continue;
       }
 
-      if (currentAttemp === two) {
+      if (currentAttemp === TWO) {
         if (enteredNumber === randomNumber) {
           totalPrize = totalPrize + thirdPrize;
           doYouWanPlayAgain = confirm(
@@ -135,13 +135,13 @@ if (doYouWanPlay === true) {
                 totalPrize +
                 '$'
             );
-            firstPrize = oneHundred;
+            firstPrize = ONE_HUNDRED;
             currentAttemp = 0;
             possiblePrize = firstPrize;
             doYouWanPlayAgain = true;
             gameNumber = 1;
             totalPrize = 0;
-            maxRandom = eight;
+            maxRandom = EIGHT;
             break;
           }
           currentAttemp = 0;
@@ -149,6 +149,7 @@ if (doYouWanPlay === true) {
           break;
         }
         if (enteredNumber !== randomNumber) {
+          totalPrize = 0;
           alert(
             'Thank you for your participation. Your prize is: ' +
               totalPrize +
@@ -157,13 +158,13 @@ if (doYouWanPlay === true) {
           currentAttemp++;
           doYouWanPlayAgain = confirm('Do you want to play again?');
           if (doYouWanPlayAgain) {
-            firstPrize = oneHundred;
+            firstPrize = ONE_HUNDRED;
             currentAttemp = 0;
             possiblePrize = firstPrize;
             doYouWanPlayAgain = true;
             gameNumber = 1;
             totalPrize = 0;
-            maxRandom = eight;
+            maxRandom = EIGHT;
             break;
           }
         }
