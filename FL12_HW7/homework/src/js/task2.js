@@ -80,7 +80,7 @@ if (doYouWanPlay === true) {
             break;
           }
 
-          currentAttemp = 0; //обнуляємо щотчик попиток
+          currentAttemp = 0;
           gameNumber++;
           break;
         }
@@ -112,7 +112,7 @@ if (doYouWanPlay === true) {
             maxRandom = eight;
             break;
           }
-          currentAttemp = 0; //обнуляємо щотчик попиток
+          currentAttemp = 0;
           gameNumber++;
           break;
         }
@@ -144,7 +144,7 @@ if (doYouWanPlay === true) {
             maxRandom = eight;
             break;
           }
-          currentAttemp = 0; //обнуляємо щотчик попиток
+          currentAttemp = 0;
           gameNumber++;
           break;
         }
