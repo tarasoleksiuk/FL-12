@@ -13,30 +13,11 @@ let firstPrize = 100;
 let secondPrize = 50;
 let thirdPrize = 25;
 let gameNumber = 1;
-//
-let messageWin =
-  'Congratulation, you won! Your prize is: ' +
-  totalPrize +
-  '$. Do you want to continue?';
-//
-let messageStatic =
-  'Choose a roulette pocket number from ' +
-  minRandom +
-  ' to ' +
-  maxRandom +
-  '\n' +
-  'Attempts left: ' +
-  (attemps - currentAttemp) +
-  '\n' +
-  'Total prize: ' +
-  totalPrize +
-  '$' +
-  '\n' +
-  'Possible prize on current attemp: ' +
-  possiblePrize +
-  '$';
+const two = 2,
+  four = 4,
+  eight = 8,
+  oneHundred = 100;
 
-//
 if (doYouWanPlay === false) {
   alert('You did not become a billionaire, but can.');
 }
@@ -44,10 +25,10 @@ if (doYouWanPlay === false) {
 if (doYouWanPlay === true) {
   while (doYouWanPlayAgain) {
     if (gameNumber !== 1) {
-      firstPrize = firstPrize * 2;
-      secondPrize = secondPrize * 2;
-      thirdPrize = thirdPrize * 2;
-      maxRandom = maxRandom + 4;
+      firstPrize = firstPrize * two;
+      secondPrize = secondPrize * two;
+      thirdPrize = thirdPrize * two;
+      maxRandom = maxRandom + four;
       possiblePrize = firstPrize;
     }
 
@@ -89,13 +70,13 @@ if (doYouWanPlay === true) {
                 totalPrize +
                 '$'
             );
-            firstPrize = 100;
+            firstPrize = oneHundred;
             currentAttemp = 0;
             possiblePrize = firstPrize;
             doYouWanPlayAgain = true;
             gameNumber = 1;
             totalPrize = 0;
-            maxRandom = 8;
+            maxRandom = eight;
             break;
           }
 
@@ -122,13 +103,13 @@ if (doYouWanPlay === true) {
                 totalPrize +
                 '$'
             );
-            firstPrize = 100;
+            firstPrize = oneHundred;
             currentAttemp = 0;
             possiblePrize = firstPrize;
             doYouWanPlayAgain = true;
             gameNumber = 1;
             totalPrize = 0;
-            maxRandom = 8;
+            maxRandom = eight;
             break;
           }
           currentAttemp = 0; //обнуляємо щотчик попиток
@@ -140,7 +121,7 @@ if (doYouWanPlay === true) {
         continue;
       }
 
-      if (currentAttemp === 2) {
+      if (currentAttemp === two) {
         if (enteredNumber === randomNumber) {
           totalPrize = totalPrize + thirdPrize;
           doYouWanPlayAgain = confirm(
@@ -154,13 +135,13 @@ if (doYouWanPlay === true) {
                 totalPrize +
                 '$'
             );
-            firstPrize = 100;
+            firstPrize = oneHundred;
             currentAttemp = 0;
             possiblePrize = firstPrize;
             doYouWanPlayAgain = true;
             gameNumber = 1;
             totalPrize = 0;
-            maxRandom = 8;
+            maxRandom = eight;
             break;
           }
           currentAttemp = 0; //обнуляємо щотчик попиток
@@ -176,13 +157,13 @@ if (doYouWanPlay === true) {
           currentAttemp++;
           doYouWanPlayAgain = confirm('Do you want to play again?');
           if (doYouWanPlayAgain) {
-            firstPrize = 100;
+            firstPrize = oneHundred;
             currentAttemp = 0;
             possiblePrize = firstPrize;
             doYouWanPlayAgain = true;
             gameNumber = 1;
             totalPrize = 0;
-            maxRandom = 8;
+            maxRandom = eight;
             break;
           }
         }
