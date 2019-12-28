@@ -1,4 +1,3 @@
-//
 let doYouWanPlay = confirm('Do you want to play a game?');
 let randomNumber;
 let minRandom = 0;
