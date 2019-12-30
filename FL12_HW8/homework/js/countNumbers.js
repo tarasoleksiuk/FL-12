@@ -14,7 +14,7 @@ function countNumbers(str) {
   arr.sort();
   for (let i = 0; i < arr.length; ++i) {
     let a = arr[i];
-    if (result[a] != undefined) {
+    if (result[a] !== undefined) {
       ++result[a];
     } else {
       result[a] = 1;
