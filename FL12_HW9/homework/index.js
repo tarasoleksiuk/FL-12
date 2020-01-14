@@ -2,13 +2,19 @@ const actors = [
   { name: 'tommy', age: 36 },
   { name: 'lee', age: 28 }
 ];
-const date = new Date(2019, 0, 2);
+
+const TWO = 2;
+const THREE = 3;
+const TEN = 10;
+const TWO_THOUSAND_NINETEEN = 2019;
+const date = new Date(TWO_THOUSAND_NINETEEN, 0, TWO);
 const MIN_NUMBER_FOR_SUBSTITUTE = 30;
 const MLSC_IN_DAY = 86400000;
+
 //1ша функція
-function convert(...arguments) {
+function convert(...argument) {
   let res = new Array();
-  for (let value of arguments) {
+  for (let value of argument) {
     if (typeof value === 'string') {
       value = parseInt(value);
     } else {
@@ -19,7 +25,7 @@ function convert(...arguments) {
   return res;
 }
 
-console.log(convert('5', 2, '3', '10'));
+//console.log(convert('5', 2, '3', '10'));
 
 //2га функція
 function executeforEach(array, functionOverArray) {
@@ -28,9 +34,9 @@ function executeforEach(array, functionOverArray) {
   }
 }
 
-executeforEach([5, 10, 15], function(el) {
-  console.log(el * 2);
-});
+// executeforEach([1, 2, 3], function(el) {
+//   console.log(el * 2);
+// });
 
 //3тя функція
 function mapArray(array, functionOverArray) {
@@ -42,11 +48,11 @@ function mapArray(array, functionOverArray) {
 
   return res;
 }
-console.log(
-  mapArray([2, '5', 8], function(el) {
-    return el + 3;
-  })
-);
+// console.log(
+//   mapArray([2, '5', 8], function(el) {
+//     return el + 3;
+//   })
+// );
 
 //4тя функція
 function filterArray(array, functionOverArray) {
@@ -61,20 +67,20 @@ function filterArray(array, functionOverArray) {
   return res;
 }
 
-console.log(
-  filterArray([2, 5, 8], function(el) {
-    return el % 2 === 0;
-  })
-);
+// console.log(
+//   filterArray([2, 5, 8], function(el) {
+//     return el % 2 === 0;
+//   })
+// );
 //5тя функція
 function flipOver(str) {
   let reversedString = '';
-  for (var i = str.length - 1; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     reversedString += str[i];
   }
   return reversedString;
 }
-console.log(flipOver('hey world'));
+// console.log(flipOver('hey world'));
 
 //6тя функція
 function makeListFromRange(array) {
@@ -84,7 +90,7 @@ function makeListFromRange(array) {
   }
   return res;
 }
-console.log(makeListFromRange([1, 8]));
+// console.log(makeListFromRange([1, 8]));
 
 //7тя функція
 function getArrayOfKeys(array, key) {
@@ -92,7 +98,7 @@ function getArrayOfKeys(array, key) {
   executeforEach(array, value => res.push(value[key]));
   return res;
 }
-console.log(getArrayOfKeys(actors, 'name'));
+// console.log(getArrayOfKeys(actors, 'name'));
 
 //8 функція
 function substitute(array) {
@@ -101,28 +107,27 @@ function substitute(array) {
   );
 }
 
-console.log(substitute([58, 14, 48, 2, 31, 29]));
+// console.log(substitute([58, 14, 48, 2, 31, 29]));
 
 //9 функція
 function getPastDay(date, days) {
   return new Date(date.getTime() - days * MLSC_IN_DAY).getDate();
 }
 
-console.log(getPastDay(date, 365));
+// console.log(getPastDay(date, 365));
 
 //10 функція
 
 function formatDate(date) {
   let hours;
   let minutes;
-  let res;
-  if (date.getHours() < 10) {
+  if (date.getHours() < TEN) {
     hours = '0' + date.getHours();
   } else {
     hours = date.getHours();
   }
 
-  if (date.getMinutes() < 10) {
+  if (date.getMinutes() < TEN) {
     minutes = '0' + date.getMinutes();
   } else {
     minutes = date.getMinutes();
@@ -141,4 +146,4 @@ function formatDate(date) {
   );
 }
 
-console.log(formatDate(new Date()));
+// console.log(formatDate(new Date()));
