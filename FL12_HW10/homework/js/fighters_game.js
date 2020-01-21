@@ -28,7 +28,6 @@ function Fighter(object) {
         return health;
     }
     this.getHealth();
-    //decrease hp on n-numbers
     this.decreaseHealth = function (decreaseOnNumber) {
         health = health - decreaseOnNumber;
         if (health < 0) {
@@ -36,10 +35,8 @@ function Fighter(object) {
         }
     }
 
-    //Wins and losses counts
     let wins = 0;
     let losses = 0;
-
     this.logCombatHistory = function () {
         console.log(`Name: ${name}, Wins: ${wins}, Losses: ${losses}`);
     }
@@ -109,10 +106,5 @@ function battle(firstFighter, secondFighter) {
             firstFighter.addLoss();
             break;
         }
-        //console.log(`${firstFighter.getName()}: ${firstFighter.getHealth()},${secondFighter.getName()}: ${secondFighter.getHealth()}`)
     }
 }
-
-const fighter1 = new Fighter({ name: 'Maximus', damage: 20, hp: 100, strength: 20, agility: 15 });
-const fighter2 = new Fighter({ name: 'Commodus', damage: 25, hp: 90, strength: 25, agility: 20 });
-battle(fighter1, fighter2);
