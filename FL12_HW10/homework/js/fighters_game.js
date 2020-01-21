@@ -1,12 +1,8 @@
-//Функція-конструктор
 function Fighter(object) {
-    //Змінна 
     let name = object.name;
-    //Доступ до змінної через функцію
     this.getName = function () {
         return name;
     }
-    //Запуск замикання
     this.getName();
 
     let damage = object.damage;
@@ -32,9 +28,12 @@ function Fighter(object) {
         return health;
     }
     this.getHealth();
-    //Зменшити життя на n-одиниць
+    //decrease hp on n-numbers
     this.decreaseHealth = function (decreaseOnNumber) {
         health = health - decreaseOnNumber;
+        if (health < 0) {
+            health = 0;
+        }
     }
 
     //Wins and losses counts
@@ -70,13 +69,12 @@ function Fighter(object) {
         losses++;
     }
 
-    //atatack-function
-
     this.attack = function (defFighter) {
-        let randomNumber = Math.floor(Math.random() * 100 + 1);
+        const ONE_HUNDRED = 100;
+        let randomNumber = Math.floor(Math.random() * ONE_HUNDRED + 1);
         let defFighterStrength = defFighter.getStrength();
         let defFighterAgility = defFighter.getAgility();
-        let successProbabolity = 100 - (parseInt(defFighterStrength) + parseInt(defFighterAgility));
+        let successProbabolity = ONE_HUNDRED - (parseInt(defFighterStrength) + parseInt(defFighterAgility));
 
         if (successProbabolity > randomNumber) {
             defFighter.decreaseHealth(damage);
@@ -87,69 +85,34 @@ function Fighter(object) {
 
     }
 }
+
+function battle(firstFighter, secondFighter) {
+    if (firstFighter.getHealth() === 0) {
+        console.log(`${firstFighter.getName()} is dead and can't fight.`);
+    }
+    if (secondFighter.getHealth() === 0) {
+        console.log(`${secondFighter.getName()} is dead and can't fight.`);
+    }
+
+    while (firstFighter.getHealth() > 0 && secondFighter.getHealth() > 0) {
+        firstFighter.attack(secondFighter);
+        if (secondFighter.getHealth() === 0) {
+            console.log(`${firstFighter.getName()} has won!`);
+            firstFighter.addWin();
+            secondFighter.addLoss();
+            break;
+        }
+        secondFighter.attack(firstFighter);
+        if (firstFighter.getHealth() === 0) {
+            console.log(`${secondFighter.getName()} has won!`);
+            secondFighter.addWin();
+            firstFighter.addLoss();
+            break;
+        }
+        //console.log(`${firstFighter.getName()}: ${firstFighter.getHealth()},${secondFighter.getName()}: ${secondFighter.getHealth()}`)
+    }
+}
+
 const fighter1 = new Fighter({ name: 'Maximus', damage: 20, hp: 100, strength: 20, agility: 15 });
-
 const fighter2 = new Fighter({ name: 'Commodus', damage: 25, hp: 90, strength: 25, agility: 20 });
-
-
-
-
-
-// fighter1.attack(fighter2);
-// console.log(fighter2.getHealth());
-// fighter1.attack(fighter2);
-// console.log(fighter2.getHealth());
-// fighter1.attack(fighter2);
-// console.log(fighter2.getHealth());
-// fighter1.attack(fighter2);
-// console.log(fighter2.getHealth());
-
-
-// console.log(myFighter.getHealth());
-// myFighter.dealDamage(20);
-// console.log(myFighter.getHealth());
-// myFighter.logCombatHistory();
-
-
-// myFighter.addLoss();
-// myFighter.logCombatHistory();
-// myFighter.addWin();
-// myFighter.logCombatHistory();
-
-// myFighter.logCombatHistory();
-// console.log(myFighter.getHealth());
-// myFighter.heal(30);
-// console.log(myFighter.getHealth());
-
-
-
-// let one = myFighter.name;
-// console.log(one); // undefined
-// let name1 = myFighter.getName();
-// console.log(name1);
-
-
-// let dem = myFighter.damage;
-// console.log(dem); // undefined
-// let dem1 = myFighter.getDamage();
-// console.log(dem1);
-
-// let str = myFighter.strength;
-// console.log(str); // undefined
-// let str1 = myFighter.getStrength();
-// console.log(str1);
-
-// let hps = myFighter.health;
-// console.log(hps); // undefined
-// let hps1 = myFighter.getHealth();
-// console.log(hps1);
-
-// let agl = myFighter.agility;
-// console.log(agl); // undefined
-// let agl1 = myFighter.getAgility();
-// console.log(agl1);
-
-// let log = myFighter.wins;
-// console.log(log); // undefined
-// let log1 = myFighter.logCombatHistory();
-// console.log(log1);
+battle(fighter1, fighter2);
