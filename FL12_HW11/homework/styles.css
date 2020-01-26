@@ -1,0 +1,32 @@
+/* Todo: your styles go here*/
+ul {
+    list-style-type:none;
+    cursor: pointer;
+}
+
+.folder i {
+    color: #edbc0b;;
+}
+
+.file i {
+    color: #bbbbbb;
+}
+
+
+.closedFolder {
+    display: none;
+}
+
+.openFolder {
+    display: block;
+}
+
+.emptyFolder {
+    font-style: italic;
+}
+
+.folder:hover,
+.file:hover,
+.empty_folder:hover {
+    background-color:#efefef;
+}
